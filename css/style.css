@@ -231,6 +231,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  gap: 20px;
 }
 .project-item-container {
   width: 287px;
@@ -254,8 +255,56 @@ h3 {
   transition: 0.6s all ease;
 }
 
-.project-item:nth-child():before {
-  content: "HTML, CSS, JS Photographer Portfolio";
+.project-item-container:nth-of-type(1) .project-item::before {
+  content: "Photographer Portfolio";
+}
+
+.project-item-container:nth-of-type(2) .project-item::before {
+  content: "Weather App";
+}
+
+.project-item-container:nth-of-type(3) .project-item::before {
+  content: "Eco Sound";
+}
+
+.project-item-container:nth-of-type(4) .project-item::before {
+  content: "Halloween Card";
+}
+
+.project-item-container:nth-of-type(5) .project-item::before {
+  content: "Yoga Studio";
+}
+
+.project-item-container:nth-of-type(6) .project-item::before {
+  content: "Flower Shop";
+}
+
+.project-item-container:nth-of-type(7) .project-item::before {
+  content: "Pet's Shelter";
+}
+
+.project-item-container:nth-of-type(8) .project-item::before {
+  content: "Custom Dev";
+}
+
+.project-item-container:nth-of-type(9) .project-item::before {
+  content: "Conquest Store";
+}
+
+.project-item-container:nth-of-type(10) .project-item::before {
+  content: "Museum";
+}
+
+.project-item-container:nth-of-type(1) .project-item::before,
+.project-item-container:nth-of-type(2) .project-item::before,
+.project-item-container:nth-of-type(3) .project-item::before,
+.project-item-container:nth-of-type(4) .project-item::before,
+.project-item-container:nth-of-type(5) .project-item::before,
+.project-item-container:nth-of-type(6) .project-item::before,
+.project-item-container:nth-of-type(7) .project-item::before,
+.project-item-container:nth-of-type(8) .project-item::before,
+.project-item-container:nth-of-type(9) .project-item::before,
+.project-item-container:nth-of-type(10) .project-item::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -270,38 +319,18 @@ h3 {
   transition: 0.6s all ease-in-out;
 }
 
-/* .project-item:nth-child(1)::after {
-  content: "Photographer Portfolio";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 70px 10px;
-  width: 50%;
-  height: 50%;
-  background-color: transparent;
-  color: #efdfcc;
- 
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-}*/
-
 .project-item:hover {
   border: 5px solid rgb(189, 173, 173);
 }
 
-.project-item:hover::before {
+.project-item-container .project-item:hover::before {
   opacity: 1;
   transform: translateY(0);
 }
 
-.project-item:nth-child(1):hover::after {
-  opacity: 1;
-}
-
 .project-item img {
   height: 100%;
-  width: auto;
+  width: 100%;
 }
 
 #contacts li {
@@ -453,6 +482,12 @@ h3 {
   .footer .rs-logo {
     padding-right: 0;
     background-color: rgb(245 243 243);
+  }
+}
+
+@media (max-width: 948px) {
+  article ul {
+    padding-left: 0;
   }
 }
 
@@ -645,5 +680,13 @@ h3 {
   }
   .profile-img {
     padding: 20px;
+  }
+
+  #experience {
+    padding: 0;
+  }
+
+  .project-item-container {
+    margin-right: 0;
   }
 }
