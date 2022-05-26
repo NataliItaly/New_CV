@@ -434,9 +434,21 @@ h3 {
   padding-top: 30px;
   padding-bottom: 40px;
 }
-.footer .rs-logo a {
+.logo-link {
   display: block;
+  width: 200px;
+  height: 50px;
   padding-left: 60px;
+  background-image: url("../images/rs_school-min.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: 65px;
+  transition: 0.6s all ease;
+}
+
+.logo-link:hover {
+  filter: invert(51%) sepia(0%) saturate(1691%) hue-rotate(147deg)
+    brightness(81%) contrast(103%);
 }
 
 @media (max-width: 972px) {
@@ -615,9 +627,12 @@ h3 {
   .footer #links {
     min-width: 170px;
   }
-  .footer .rs-logo a {
+  .logo-link {
     padding-left: 0;
     text-align: center;
+    background-position-x: 20px;
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(14deg)
+      brightness(101%) contrast(101%);
   }
 }
 
